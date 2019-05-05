@@ -1,10 +1,13 @@
 package com.njupt.ciot.graduatebill.domain;
 
+import lombok.Data;
+
 /**
  * @Author ShGuan
  * @Description 报告实体类
  * @Date 2019/5/5 17:55
  **/
+@Data
 public class Bill extends BaseEntity{
 
     /**

@@ -1,5 +1,7 @@
 package com.njupt.ciot.graduatebill.domain;
 
+import lombok.Data;
+
 import java.util.List;
 
 /**
@@ -7,6 +9,7 @@ import java.util.List;
  * @Description 学生实体类，用于业务逻辑
  * @Date 2019/5/5 17:55
  **/
+@Data
 public class Student extends BaseEntity{
 
     /**
