@@ -1,4 +1,4 @@
-package com.njupt.ciot.graduate_bill;
+package com.njupt.ciot.graduatebill;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

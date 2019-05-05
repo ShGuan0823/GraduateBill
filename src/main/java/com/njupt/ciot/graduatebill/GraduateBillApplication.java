@@ -1,4 +1,4 @@
-package com.njupt.ciot.graduate_bill;
+package com.njupt.ciot.graduatebill;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
