@@ -45,7 +45,7 @@ public class Student extends BaseEntity{
     /**
      * 花销
      */
-    private String coust;
+    private List<String> counstList;
 
     /**
      * 获奖情况
