@@ -1,6 +1,7 @@
 package com.njupt.ciot.graduatebill.domain;
 
 import lombok.Data;
+import javax.validation.constraints.NotBlank;
 
 /**
  * @Author ShGuan
@@ -9,13 +10,16 @@ import lombok.Data;
  **/
 @Data
 public class User extends BaseEntity{
+
     /**
      * 帐号
      */
+    @NotBlank(message = "帐号不能为空")
     private String username;
     /**
      * 密码
      */
+    @NotBlank(message = "密码不能为空")
     private String password;
     /**
      * 学号

@@ -1,6 +1,8 @@
 package com.njupt.ciot.graduatebill.domain;
 
 import lombok.Data;
+
+
 import java.io.Serializable;
 import java.util.Date;
 
@@ -13,7 +15,7 @@ import java.util.Date;
 @Data
 public class BaseEntity implements Serializable{
 
-    private String id;
+    private Integer id;
 
     private Date cmt;
 
