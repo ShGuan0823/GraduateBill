@@ -13,15 +13,28 @@ import java.util.Date;
 @Data
 public class Award extends BaseEntity {
     /**
-     * 奖项id
-     */
-    private String awardId;
-    /**
      * 奖项名
      */
-    private String awardName;
+    private String name;
     /**
      * 获奖时间
      */
-    private Date awardTime;
+    private String year;
+    /**
+     * 等级
+     */
+    private String level;
+    /**
+     * 结果
+     */
+    private String grade;
+    /**
+     * 学生
+     */
+    private String stuName;
+    /**
+     * 学号
+     */
+    private String stuId;
+
 }
