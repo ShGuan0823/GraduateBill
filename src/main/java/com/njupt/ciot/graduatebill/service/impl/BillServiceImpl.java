@@ -23,12 +23,12 @@ public class BillServiceImpl implements BillService {
         Student student = new Student();
         // 学号、姓名
         student.setStuId(stuId);
-        student.setStuName(billDao.getStuName(stuId));
+        student.setStuName(billDao.getStuName(stuId).trim());
         // 四六级
-        student.setCET4(billDao.getCet4(stuId));
-        student.setCET6(billDao.getCet6(stuId));
+        student.setCET4(billDao.getCet4(stuId).trim());
+        student.setCET6(billDao.getCet6(stuId).trim());
         // 书籍借阅量
-        student.setBookNum(billDao.getBookNum(stuId));
+        student.setBook(billDao.getBook(stuId));
         // 绩点
         student.setGrade(billDao.getGrade(stuId));
         // 等级考试
@@ -37,6 +37,7 @@ public class BillServiceImpl implements BillService {
         student.setAwardList(billDao.getAwardList(stuId));
         Bill bill = new Bill();
         bill.setStudent(student);
+//        bill.setBookSection();
         return bill;
     }
 }

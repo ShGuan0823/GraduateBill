@@ -7,8 +7,8 @@
     <select id="getCet6" resultType="java.lang.String" parameterType="java.lang.String">
         SELECT grade FROM `CET-6` WHERE stuId = #{stuId}
     </select>
-    <select id="getBookNum" resultType="java.lang.Integer" parameterType="java.lang.String">
-        SELECT borrowNum FROM library WHERE stuId = #{stuId}
+    <select id="getBook" resultType="com.njupt.ciot.graduatebill.domain.Book" parameterType="java.lang.String">
+        SELECT * FROM library WHERE stuId = #{stuId}
     </select>
     <select id="getGrade" resultType="com.njupt.ciot.graduatebill.domain.Grade" parameterType="java.lang.String">
         SELECT * FROM grade WHERE stuId = #{stuId}

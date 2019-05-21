@@ -34,4 +34,6 @@ public class Grade extends BaseEntity{
 
     private String credit;
 
+    private int rank;
+
 }

@@ -39,7 +39,7 @@ public class Student extends BaseEntity{
     /**
      * 借阅书籍量
      */
-    private Integer bookNum;
+    private Book book;
 
     /**
      * 学时
@@ -60,4 +60,8 @@ public class Student extends BaseEntity{
      * 等级考试情况
      */
     private List<String> levelExamList;
+
+    public void setBook(Book book) {
+        this.book = book.preShow(book);
+    }
 }

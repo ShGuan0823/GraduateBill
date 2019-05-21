@@ -2,6 +2,7 @@ package com.njupt.ciot.graduatebill.dao;
 
 
 import com.njupt.ciot.graduatebill.domain.Award;
+import com.njupt.ciot.graduatebill.domain.Book;
 import com.njupt.ciot.graduatebill.domain.Grade;
 import org.apache.ibatis.annotations.Mapper;
 import java.util.List;
@@ -13,7 +14,7 @@ public interface BillDao {
 
     String getCet6(String stuId);
 
-    Integer getBookNum(String stuId);
+    Book getBook (String stuId);
 
     String getStuName(String stuId);
 
@@ -22,5 +23,7 @@ public interface BillDao {
     Grade getGrade(String stuId);
 
     List<Award> getAwardList(String stuId);
+
+
     
 }
