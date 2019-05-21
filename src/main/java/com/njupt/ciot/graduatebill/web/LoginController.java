@@ -3,6 +3,7 @@ package com.njupt.ciot.graduatebill.web;
 import com.njupt.ciot.graduatebill.common.result.Result;
 import com.njupt.ciot.graduatebill.common.result.ResultGenerator;
 import com.njupt.ciot.graduatebill.domain.User;
+import com.njupt.ciot.graduatebill.service.BillService;
 import com.njupt.ciot.graduatebill.service.LoginService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
@@ -24,11 +25,14 @@ public class LoginController {
     @Autowired
     LoginService loginService;
 
+    @Autowired
+    BillService billService;
+
     @PostMapping("/loginVerify")
     public Result<Boolean> loginVerify(@RequestBody @Valid User user) {
         boolean result = loginService.loginVerify(user);
         if (result) {
-            return ResultGenerator.genSuccessResult(result);
+            return ResultGenerator.genSuccessResult(billService.getByStuId(user.getStuId()));
         } else {
             return ResultGenerator.genFailResult("密码不正确");
         }

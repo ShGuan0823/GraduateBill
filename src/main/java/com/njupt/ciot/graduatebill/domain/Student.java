@@ -25,12 +25,16 @@ public class Student extends BaseEntity{
     /**
      * 绩点
      */
-    private List<String> grade;
+    private Grade grade;
 
-    /**
-     * 入学年份
-     */
-    private String entranceYear;
+//    /**
+//     * 入学年份
+//     */
+//    private String entranceYear;
+
+    private String CET4;
+
+    private String CET6;
 
     /**
      * 借阅书籍量
@@ -53,7 +57,7 @@ public class Student extends BaseEntity{
     private List<Award> awardList;
 
     /**
-     * 竞赛情况
+     * 等级考试情况
      */
-    private List<Competition> compList;
+    private List<String> levelExamList;
 }
