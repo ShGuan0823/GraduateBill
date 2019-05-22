@@ -15,6 +15,8 @@ import org.springframework.stereotype.Service;
 @Service
 public class BillServiceImpl implements BillService {
 
+    private static final int stuNum = 300;
+
     @Autowired
     BillDao billDao;
 
@@ -37,7 +39,7 @@ public class BillServiceImpl implements BillService {
         student.setAwardList(billDao.getAwardList(stuId));
         Bill bill = new Bill();
         bill.setStudent(student);
-//        bill.setBookSection();
+        bill.setAwardSection(String.valueOf((stuNum - student.getGrade().getRank()) * 100 / stuNum));
         return bill;
     }
 }

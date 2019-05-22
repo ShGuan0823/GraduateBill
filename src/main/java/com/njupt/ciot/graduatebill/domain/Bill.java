@@ -16,11 +16,6 @@ public class Bill extends BaseEntity{
     private Student student;
 
     /**
-     * 借阅量区间
-     */
-    private String bookSection;
-
-    /**
      * 获奖区间
      */
     private String awardSection;
