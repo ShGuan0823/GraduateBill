@@ -10,6 +10,6 @@ import com.njupt.ciot.graduatebill.domain.User;
  **/
 public interface LoginService {
 
-    boolean loginVerify(User user);
+    boolean loginVerify(User user) throws Exception;
 
 }

@@ -30,11 +30,11 @@ public class LoginController {
 
     @PostMapping("/loginVerify")
     public Result<Boolean> loginVerify(@RequestBody @Valid User user) {
-        boolean result = loginService.loginVerify(user);
-        if (result) {
+        try {
+            boolean result = loginService.loginVerify(user);
             return ResultGenerator.genSuccessResult(billService.getByStuId(user.getStuId()));
-        } else {
-            return ResultGenerator.genFailResult("密码不正确");
+        } catch (Exception e) {
+            return ResultGenerator.genFailResult("学号或密码错误");
         }
     }
 

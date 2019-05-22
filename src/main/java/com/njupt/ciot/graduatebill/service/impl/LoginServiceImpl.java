@@ -5,6 +5,7 @@ import com.njupt.ciot.graduatebill.domain.User;
 import com.njupt.ciot.graduatebill.service.LoginService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.util.StringUtils;
 
 
 /**
@@ -19,8 +20,11 @@ public class LoginServiceImpl implements LoginService {
     LoginDao loginDao;
 
     @Override
-    public boolean loginVerify(User user) {
+    public boolean loginVerify(User user) throws Exception {
         String temp = loginDao.findPasswordByUsername(user.getUsername());
+        if (StringUtils.isEmpty(temp)) {
+            throw new Exception("学号不存在");
+        }
         if (temp.equals(user.getPassword())) {
             return true;
         }
