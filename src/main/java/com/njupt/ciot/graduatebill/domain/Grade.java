@@ -16,6 +16,8 @@ public class Grade extends BaseEntity{
 
     private String term_three;
 
+    private String term_four;
+
     private String term_five;
 
     private String term_six;

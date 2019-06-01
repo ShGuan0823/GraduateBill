@@ -13,7 +13,7 @@ import java.util.Date;
  **/
 
 @Data
-public class BaseEntity implements Serializable{
+public class BaseEntity{
 
     private Integer id;
 

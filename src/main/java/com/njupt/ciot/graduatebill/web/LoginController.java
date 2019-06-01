@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.validation.Valid;
@@ -18,7 +19,7 @@ import javax.validation.Valid;
  * @Author ShGuan
  * @Date 2019/5/7 15:45
  **/
-@Validated
+//@Validated
 @RestController
 public class LoginController {
 
@@ -29,9 +30,9 @@ public class LoginController {
     BillService billService;
 
     @PostMapping("/loginVerify")
-    public Result<Boolean> loginVerify(@RequestBody @Valid User user) {
+    public Result<Boolean> loginVerify(@RequestBody User user) {
         try {
-            boolean result = loginService.loginVerify(user);
+            loginService.loginVerify(user);
             return ResultGenerator.genSuccessResult(billService.getByStuId(user.getStuId()));
         } catch (Exception e) {
             return ResultGenerator.genFailResult("学号或密码错误");
